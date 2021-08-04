@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: #afa;
+            float: left;
+            margin: 10px;
+            transition: .5s;
+        }
+        .translateX:hover {
+            transform: translate(50px);
+
+        }
+        .rotate {
+            transform-origin:top left ;
+            /* 50% left */
+        }
+        .rotate:hover {
+            transform: rotate(80deg);
+        }
+        .scale:hover {
+            transform: scale(2,5 ) ;
+        }
+        .skew:hover {
+            transform: skew(3deg, 9deg) ;
+        }
+        .translateX-rotate:hover {
+            transform: translate(300px) rotate(100deg);
+            /* translate rotate 可以順序對換 效果也變 */
+        }
+        .matrix-scale:hover {
+            transform: matrix(2,0,0,2,0,0);
+
+        }
+        .matrix-rotate:hover {
+            transform: matrix(0.86603,0.5,-0.5,0.86603,0,0);
+        }
+        /* cos, sin ,-sin, cos, 0 ,0  */
+        .img-wrap:hover {
+            transform: scale(2);
+        }
+    </style>
+</head>
+<body>
+    <div class="box translateX"></div>
+    <div class="box rotate"></div>
+    <div class="box scale"></div>
+    <div class="box skew"></div>
+    <div class="box translateX-rotate"></div>
+    <div class="box matrix-scale"></div>
+    <div class="box matrix-rotate">matrix-rotate</div>
+    <div class="box" style="overflow: hidden;">
+        <div class="img-wrap" style="width:100%; height:100%;">
+            <img src="./images/bubble2拷貝.png" alt=""
+            style="width: 100%;height: 100%;object-fit: fill;">
+                
+        </div>
+    </div>
+    
+
+</body>
+</html>

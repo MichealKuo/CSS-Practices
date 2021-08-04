@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #view {
+            transform-style:preserve-3d ;
+            perspective: 400px;
+            width: 200px;
+            height: 200px;
+            border:1px solid green;
+            margin: 100px;
+            perspective-origin:45px 7px ;
+        }
+        .red-box {
+            width: 200px;
+            height: 200px;
+            border: 1px solid red;
+            transform: rotateY(20deg) translateZ(100px);
+            /* X度數0(下)180(上) Y則左到右 */
+
+        }
+    </style>
+</head>
+<body>
+    <div id="view">
+        <div class="red-box">
+            <p>rotateX(45deg)</p>
+        </div>
+    </div>
+    <!-- #=id -->
+</body>
+</html>

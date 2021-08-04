@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap {
+            display: flex;
+            border: 3px solid red;
+            height: 80vh;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        .box {
+            width: 200px;
+            height: 200px;
+            /* stretch不能把高寫死 */
+            /* background-color: #afaa; */
+            padding: 5px;
+            
+        }
+        .card {
+            width: 100%x;
+            height: 100%;
+            background-color: #faf;
+            /* display: flex;
+            justify-content: center;
+            align-items: center;  */
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="box">
+            <div class="card">
+                <div class="box">box1</div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="card">
+                <div class="box">box2</div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="card">
+                <div class="box">box3</div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

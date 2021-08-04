@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- A.B.C這是指同一個人 -->
+    <!-- A B C 這是Ａ裡面的B Ｂ裡面的Ｃ-->
+    <!-- Ａ>B 這是只找到Ｂ層 -->
+    <style>
+        .background {
+            width: 1000px;
+            height: 500px;
+            background: url(./images/Musee\ du\ Louvre.jpg) center center/cover no-repeat;
+            opacity: 0.8;
+            transition: .5s;
+
+        }
+
+        h1 {
+            text-align: center;
+            
+            /* width:100%就可文字置中 */
+            position:absolute;
+            bottom: 270px;
+            left:460px;
+        }
+        /* h1 {
+            color :white;
+            opacity: 1  !important ;
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            top: 0;
+        } */
+
+        .background:hover {
+            color: white;
+            opacity: 1;
+            transition: .5s;
+        }
+
+         /* .container {
+            position: relative;
+        } */
+
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="background">
+            <h1>Paris</h1>
+        </div>
+        <!-- <h1>Paris</h1> 跳出background的框 -->
+    </div>
+
+</body>
+
+</html>
+
+
+<!-- 在容器裡面下relative -->
+<!-- relative 最推薦的原因是長寬都不變 -->

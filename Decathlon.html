@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decathlon</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .container {
+            width: 1850px;
+            position: relative;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .header-notice {
+            display: flex;
+            width: 100%;
+            margin: -8px -15px;
+            padding: 10px 70px;
+            background-color: #0072b8;
+            color: #fff;
+            text-decoration: none;
+            justify-content: space-between;
+
+        }
+
+        .header-notice>a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .header-toolbar {
+            display: flex;
+            margin: 30px;
+            justify-content: flex-start;
+            /* align-items:center; */
+        }
+        .logo img {
+            width: 160px;
+            height: 35px;
+        }
+        .searchbar {
+            width: 250px;
+            height:35px ;
+            padding-left: 15px;
+            margin-left: 15px;
+            /* position: absolute; */
+
+        }
+        .buttom {
+            position: absolute;
+            margin-left: -20px; 
+            width: 50px;
+            height: 35px;
+            clip-path: polygon(8px 0%, 100% 0, 100% 100%, 0% 100%);
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="header-notice">
+                【宅配單筆滿$499免運(大型商品除外)，超商取貨滿$199免運，門市取貨全面免運】
+                <a href="">登入/註冊</a>
+            </div>
+            
+            
+        </div>
+        <div class="row">
+            <div class="header-toolbar">
+               <div class="logo">
+                   <a href=""><img src="./切版作業/迪卡儂照片/Logo.png" alt="">
+                   </a>
+               </div>
+               <div class="search">
+                   <input type="text" class="searchbar" placeholder="搜尋" maxlength="100">
+                   <input type="submit" class="buttom" value="">
+
+               </div>
+               
+        </div>
+    </div>
+    
+</body>
+
+</html>

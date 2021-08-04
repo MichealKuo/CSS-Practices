@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap {
+            display: flex;
+            border: 3px solid red;
+            height: 80vh;
+        }
+        .box {
+            width: 400px;
+            flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: 0px;
+            /* flex: 1 1 0   grow：變大 shrink:空間不夠 自動平均 basis一次全部更改 無法改就是有設max/min-width */
+            
+            /* grow 有彈性 shrink不報版 basis有搭配組合的可能 */
+            height: 200px;
+            background-color: #afa;
+            font-size: 2rem;
+            flex-grow: 0;
+            text-align: center;
+            border: 1px solid #000;
+        }
+    </style>
+    <!-- 容器不要寫死 就有彈性 用內容物去堆高 -->
+</head>
+<body>
+    <div class="wrap">
+        <div class="box">box1</div>
+        <div class="box">box2</div>
+        <div class="box">box3</div>
+    </div>
+</body>
+</html>

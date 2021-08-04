@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100%;
+            height: 100px;
+            margin-bottom: 20px;
+
+        }
+        .grad1 {
+            background: linear-gradient( red, orange, yellow,green,blue)
+        }
+        .grad2 {
+            background: linear-gradient(to right, red, orange, yellow,green,blue)
+
+        }
+        .grad3 {
+            background: linear-gradient(135deg, #09121c, #e0c3fc,green,blue)
+        }
+        .grad4 {
+            background: linear-gradient(135deg, #09121c 90% , #e0c3fc,green ,blue )
+            /* 第一個百分比是0到幾趴 最後一個是從多少趴到結束  中間只能撿剩下的*/
+        }
+        .grad5 {
+            background: linear-gradient(to left, #09121c  , #e0c3fc,green ,blue );
+            background-size:20px 20px; 
+        }
+        .grad6 {
+            background: linear-gradient(to left, #09121c  , #e0c3fc,green ,blue );
+            background-size:20px 20px; 
+        }
+        .grad7 {
+            background: linear-gradient(to left, #1644776c 50% , #32075a63,rgba(0, 128, 0, 0.418) 50% ,rgba(0, 0, 255, 0.37) 50% );
+            
+            background: linear-gradient(to bottom, #09121c71 50% , #2c0f476c,rgba(0, 128, 0, 0.404) 50% ,rgba(0, 0, 255, 0.411) 50% );
+            background-size:20px 20px; 
+
+
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box grad1"></div>
+    <div class="box grad2"></div>
+    <div class="box grad3"></div>
+    <div class="box grad4"></div>
+    <div class="box grad5"></div>
+    <div class="box grad6"></div>
+    <div class="box grad7"></div>
+
+
+</body>
+</html>

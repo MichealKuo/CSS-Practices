@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex4</title>
+    <style>
+        .container {
+            position: relative;
+            background-color: rgb(0, 0, 0);
+            overflow-y: hidden;
+            /* y超過的隱藏就不會scroll bar變長 */
+        }
+
+        .background {
+            height: 500px;
+            background:linear-gradient(rgba(54, 51, 51, 0.568) , rgba(39, 35, 35, 0.562)), url('./images/Musee\ du\ Louvre.jpg') center center/ cover no-repeat;
+            opacity: 1;
+            transition: .5s;
+            /* linear-gradient 有點像是圖片的屬性 */
+        }
+
+        .container:hover>.background {
+            opacity: 0.3;
+        }
+
+        .container #myh1 {
+            color: rgb(89, 117, 226);
+            opacity: 1;
+            margin: 0;
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            bottom: 10px;
+            transform: translateY(100px);
+            transition: .5s;
+        }
+
+        .container:hover>#myh1 {
+            color: rgb(226, 75, 75);
+            transform: translateY(0px);
+        }
+
+        #myh1:hover {
+            opacity: 1;
+        }
+
+        /* 1 + 10 */
+        h1.myClassH1 {
+            /* color: rgb(194, 39, 42); */
+        }
+
+        /* 10 + 10 */
+        h1.myClassH1.myClass2 {
+            /* color: rgb(83, 194, 39); */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- opacity: .1; -->
+        <div class="background"></div>
+
+        <!-- opacity: 1; -->
+        <h1 id="myh1" class="myClassH1 myClass2 box-shadow1">Paris</h1>
+
+    </div>
+</body>
+
+</html>

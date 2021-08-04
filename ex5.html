@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .card {
+            width: 260px;
+            height: 300px;
+            background-color: rgba(245, 244, 244, 0.849);
+            border-radius: 30% 30% 15% 15% ;
+            margin: 60px auto ;
+
+        }
+        .card:hover {
+            transform: translate(0,-50px);
+            box-shadow: 0px 20px 30px  rgba(36, 34, 34, 0.445);
+           
+        }
+        .card:hover>.banner {
+            background-image:url('./images/city.jpg');
+            object-fit: cover;
+            transform: translate(0,-50px);
+            box-shadow: 0px 20px 30px  rgba(36, 34, 34, 0.445);
+
+        }
+        
+        
+        .banner {
+            background-image: url('./images/flowers.jpg');
+            background-size: cover;
+            width: 100%;
+            height: 33%;
+            border-radius: 30% 30% 0 0;
+            
+        }
+        .figure {
+            width: 33%;
+            height: 33%;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: -50px auto 0px auto;
+        }
+        .figure img {
+            width: 100%;
+        }
+        .wrap   {
+            padding: 15px 20px;
+            text-align: center;
+        }
+        h3 {
+            width: 80%;
+            text-align: center;
+            padding: 10px 0px ;
+            border-bottom: 1px solid rgb(77, 131, 77);
+        
+            margin: 10px auto ;
+        }
+        .wrap>a {
+            width: 50%;
+            display: block;
+            background: linear-gradient(pink,red);
+            border-radius: 15px;
+            margin: 10px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="banner">
+            
+        </div>
+
+        <div class="figure">
+            <img src="./images/ex1_pic1.jpg" alt="">
+        </div>
+        <div class="wrap">
+            <h3>Jean</h3>
+            <p>Hello,Nice to meet You!!</p>
+            <a class="b" href="https://www.instagram.com/">Follow ME </a>
+        </div>
+    </div>
+</body>
+
+</html>

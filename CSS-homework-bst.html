@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <style>
+         * {
+            box-sizing: border-box;
+        }
+        nav {
+            width: 100vw;
+            height: 300vh;   
+        }
+        .container {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0px
+        }
+        .row-header{
+            background-color: #0072b8;
+            color: #fff;
+            align-items: center;
+            padding:0px 10px;
+        }
+        .header-text {
+            padding-top: 10px;
+        }
+        .header-loggin>a{
+            text-decoration: none;
+            color: #fff;
+            font-size: 0.9rem;
+        }
+        .header-loggin>a:hover {
+            padding: 8px;
+            background: rgb(85, 150, 228);
+        }
+
+        .header-toolbar img {
+            width: 160px;
+            height: 35px;
+            padding-left:15px ;
+        }
+
+       
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="container ">
+            <div class="row-header d-flex justify-content-between">
+                <div class="header-text">
+                    <h6>【宅配單筆滿$499免運(大型商品除外)，超商取貨滿$199免運，門市取貨全面免運】
+                    </h6>
+                </div>
+                <div class="header-loggin">
+                    <a href="">登入/註冊</a>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row mw-100 d-flex jus">
+                <div class="header-nav d-flex justify-content-between">
+                    <div class="header-toolbar">
+                        <a href=""><img src="./切版作業/Logo.png" alt=""></a>
+                        <input type="search" class="searchbar" maxlength="500" placeholder="搜尋">
+                        <input type="button" name="submit_Btn" 
+                        id="submit_Btn" onClick="document.form1.submit()">
+                    </div>
+                    <div class="header-icon ml-auto">
+                        <a href="" class="info"><img src="./切版作業/user.svg">會員中心</a>
+                        <a href="" class="info"><img src="./切版作業/location.svg">門市資訊</a>
+                        <a href="" class="info"><img src="./切版作業/list-numbered.svg">購物清單</a>
+                        <a href="" class="info"><img    src="./切版作業/cart.svg">購物車(0)</a>
+                     </div>
+                 </div>
+            </div>
+        </div>
+    </nav>
+
+    
+</body>
+
+</html>

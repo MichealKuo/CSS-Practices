@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            /* width: 100%; */
+            display:flex
+        }
+
+
+        .box {
+            width: 200px;
+            /* 設定不換行 */
+            /* white-space: nowrap; */
+            /* overflow: hidden; */
+            /* 設定超之外的全部隱藏 */
+            /* text-overflow: ellipsis; */
+            /* 文字結尾省略效果 ellipsis只有單行有效*/
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam recusandae inventore porro reprehenderit voluptate, optio maxime? Dolores quis, voluptate temporibus animi maiores eligendi veritatis magnam, perspiciatis mollitia deserunt, rem nulla.
+
+        </div>
+        <div class="box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad sunt alias, laudantium eum fuga labore voluptatibus illum eligendi! Dolore ut suscipit laborum, saepe dolorem et ipsum quam facilis maxime non.
+
+        </div>
+        <div class="box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, quos. Rem odit magnam in distinctio, optio sequi, incidunt asperiores eligendi rerum excepturi totam. Minus, ad voluptates? Molestias sapiente iure ex.
+
+        </div>
+    </div>
+</body>
+</html>

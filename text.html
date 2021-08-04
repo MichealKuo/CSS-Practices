@@ -1,0 +1,1417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>犀牛盾 Rhinoceros-Shield</title>
+  <link rel="stylesheet" href="reste.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <!-- 上方這個用於phone的 > icon 跟 < icon -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      /* outline: 1px solid#f00;   */
+    }
+
+    body {
+      height: 350vh;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background-color: rgb(255, 255, 255);
+
+    }
+
+
+    .header-header {
+      padding: 10px;
+
+
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 1200px;
+      height: 100%;
+      padding: 0 25px;
+      margin: 0 auto;
+
+    }
+
+    .header-wrap {
+      height: 100%;
+      display: flex;
+
+
+    }
+
+    .header-wrap-2 {
+
+      height: 100%;
+
+    }
+
+    .button {
+      display: none;
+      position: absolute;
+      left: 25px;
+      top: 23px;
+      width: 18px;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .button-one {
+      display: block;
+      width: 16px;
+      height: 16px;
+      background: linear-gradient(217deg, rgba(251, 255, 0, 0.8), rgba(255, 0, 0, 0) 70.71%),
+        linear-gradient(127deg, rgba(190, 26, 67, 0.8), rgba(0, 255, 0, 0) 70.71%),
+        linear-gradient(336deg, rgba(0, 174, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
+      position: absolute;
+      left: calc(50% - 9px);
+      z-index: 1;
+      transition:.3s ;
+    }
+
+
+
+
+    .button-one:hover {
+      transform: translateY(-3px);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      width: 185px;
+      margin-right: 100px;
+      height: 100%;
+    }
+
+    .logo a {
+      width: 100%;
+
+    }
+
+    .logo img {
+      width: 100%;
+      height: auto;
+      display: block;
+
+    }
+
+    .title {
+      box-sizing: border-box;
+    }
+
+    .title-wrap {
+      display: flex;
+      align-items: center;
+      height: 100%;
+    }
+
+    .title-1 {
+      position: relative;
+
+
+    }
+
+    .title-2 {
+      position: relative;
+      padding: 0 30px;
+
+    }
+
+    .title-3 {
+      position: relative;
+      margin: 0;
+    }
+
+    .title-4 {
+      position: relative;
+      padding: 0 30px;
+    }
+
+    .title-5 {
+      position: relative;
+
+    }
+
+    .title-a {
+      font-size: 15px;
+      font-weight: bold;
+      color: #000
+    }
+
+    .title-a:hover {
+      color: rgb(255, 230, 0);
+      text-decoration: none;
+    }
+
+    .header-icon {
+      position: relative;
+      width: 360px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    .header-icon1 {
+      width: 80px;
+      
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    .header-icon2 {
+      width: 80px;
+      
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+    }
+
+    .header-iocn3 {
+      width: 80px;
+     
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    .Inquire {
+      width: 80px;
+     
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+    }
+
+    .header .shopping {
+      position: relative;
+      display: inline-block;
+      align-items: center;
+
+
+    }
+
+    .shopping img {
+      position: relative;
+      display: flex;
+      width: 25px
+    }
+
+    .header .member {
+      position: relative;
+      display: flex;
+      align-items: center;
+
+
+    }
+
+    .member img {
+      position: relative;
+      display: flex;
+      width: 25px
+    }
+
+    .header .Inquire {
+      position: relative;
+      display: flex;
+      align-items: center;
+
+    }
+
+    .Inquire svg {
+      position: relative;
+      display: flex;
+      align-items: center;
+      width: 25px
+    }
+
+    /* Carousel 幻燈輪播片開始 */
+    .container {
+
+      width: 100%;
+      background-size: cover;
+      background-position: center;
+      padding: 50px 0 0 0;
+      position: relative;
+      
+    }
+
+    .carousel-inner img {
+      margin-bottom: 4.5px; 
+    }
+
+    /* Carousel 幻燈輪播片 */
+    /* phone */
+    .phone {
+      padding: 30px;
+      background-color: lightgrey;
+    }
+
+
+
+    .phone-item-wrap {
+      position: relative;
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .phone-item {
+      list-style-type: none;
+      display: flex;
+      justify-content: space-around;
+      align-items: baseline;
+    }
+
+    .phone-img {
+      width: 100%;
+      margin: 0;
+    }
+
+    .phone-img a {
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 12px;
+      color: black
+    }
+
+    .phone-img a:hover {
+      opacity: 0.5;
+    }
+
+    .phone-left {
+      display: none;
+      position: absolute;
+      left: -10px;
+      top: calc(50% - 15px);
+      width: 30px;
+      height: 30px;
+      justify-content: center;
+      align-items: center;
+      background: none;
+      border: none;
+      font-size: 30px;
+      color: #fff;
+      z-index: 9;
+      cursor: pointer;
+    }
+
+    .phone-right {
+      display: none;
+      position: absolute;
+      right: -10px;
+      top: calc(50% - 15px);
+      width: 30px;
+      height: 30px;
+      justify-content: center;
+      align-items: center;
+      background: none;
+      border: none;
+      font-size: 30px;
+      color: #fff;
+      z-index: 9;
+      cursor: pointer;
+    }
+
+    .fa {
+      font-size: inherit;
+    }
+
+    .fa-angle-left ::before {
+      content: "\f104";
+
+    }
+
+    .fa-angle-right ::before {
+      content: "\f105";
+
+    }
+
+    /* phone */
+    /* image部分 */
+
+    .shock-cotent {
+
+      height: 450px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #313540;
+      overflow: hidden;
+    }
+
+    .image-shock {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .shock {
+      width: 1920px;
+      height: 760px;
+      margin-top: -230px;
+      z-index: 1;
+      /* 要讓圖片hidden 所以寫死 */
+      /* image部分  */
+    }
+
+    .image-content {
+      position: absolute;
+      left: calc(50% - 295px);
+      top: calc(50% - 171px);
+      width: 590px;
+      box-sizing: border-box;
+      text-align: center;
+      color: #fff;
+      z-index: 2;
+    }
+
+    .image-wrap {
+      height: 45px;
+    }
+
+    .image-wrap {
+      width: 380px;
+      margin: 0 auto;
+    }
+
+    .content-p {
+      width: 300px;
+      margin: 30px auto;
+    }
+
+    .content-btn {
+      display: block;
+      width: 240px;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 700;
+      border: 2px solid #fff;
+      border-radius: 60px;
+      padding: 10px 20px;
+      margin: 0 auto;
+      transition: all .3s ease;
+    }
+
+    .product {
+      position: relative;
+      width: 100%;
+      box-sizing: border-box;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+
+    }
+
+    .product-item {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      width: 50%;
+      background-color: #d7dbde;
+      box-sizing: border-box;
+      padding-top: 50px;
+    }
+
+    .product-image-left {
+      border-right: 1px solid #fff;
+      border-bottom: 2px solid #fff;
+
+
+    }
+
+    .product-image-right {
+
+      border-left: 1px solid #fff;
+      border-bottom: 2px solid #fff;
+    }
+
+    .product-title-wrap {
+      display: block;
+      text-align: center;
+    }
+
+    .product-link {
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 1;
+    }
+
+    .product-title-wrap {
+      display: block;
+      text-align: center;
+    }
+
+    .title-h2 {
+      margin: 0;
+      padding: 0;
+      color: #232323;
+      font-size: 20px;
+      font-weight: bolder;
+
+    }
+
+    .title-p {
+      font-weight: bold;
+      padding: 10px 0;
+    }
+
+    .product-image-wrap {
+      width: 500px;
+    }
+
+    .product-img {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+
+
+    }
+
+    .produvt-image {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* image部分 */
+    /* news */
+
+    .news-wrap {
+      display: block;
+      margin: 0 auto;
+      background: #e3e3e3;
+      width: 100%;
+      font-size: 14px;
+      position: relative;
+      z-index: 2;
+
+    }
+
+    .news {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 60px 0;
+      background-color: rgb(227, 227, 227)
+    }
+
+    .news-text {
+      height: 72px;
+      flex: 0 0 50%;
+      padding: 0 20px;
+      margin: 0;
+
+
+    }
+
+    .news-email-wrap {
+
+
+      flex: 0 0 50%;
+      padding: 0 20px;
+      height: 45px;
+      outline: none;
+
+    }
+
+    .news-email {
+      display: flex;
+    }
+
+    /* news */
+    /* footer */
+    .footer {
+      padding: 10px 10px;
+      max-width: 1200px;
+      margin: 0 auto;
+      background-color: rgb(255, 255, 255);
+
+    }
+
+    .footer-wrap {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      width: 100%;
+
+
+
+    }
+
+    .footer-meun {
+      padding: 30px 30px;
+      display: flex;
+      width: 100%;
+
+    }
+
+    .fotter-title {
+      font-size: 16px;
+      margin: 0 0 13px 0;
+      font-weight: bolder;
+    }
+
+    .footer-menu-link {
+
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+    }
+
+
+    .footer-menu-link-ul {
+      display: flex;
+      justify-content: space-between;
+      list-style-type: none;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .footer-block a {
+      display: inline-block;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: bold;
+      color: rgb(10, 3, 3);
+
+    }
+
+    .footer-block a:hover {
+      /* color: rgba(0%, 0%, 100%, 0.5) */
+      opacity: 0.5;
+      /*半透明*/
+    }
+
+    .footer-menu-item {
+      width: 100%;
+    }
+
+    .footer-menu-link-ul a :hover {
+      opacity: 0.5;
+      /*半透明*/
+    }
+
+    /* footer */
+    /* copyrigh */
+    .copyrigh-language {
+      padding-bottom: 20px;
+      font-size: 11px;
+      line-height: 17px;
+      color: #3d3d3d;
+      border-top: 1.5px solid rgb(226, 226, 226);
+      padding-top: 20px;
+      margin-top: 20px;
+    }
+
+    .copyrigh-language-wrap {
+      position: relative;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .copyrigh-language-wrap ul {
+      display: block;
+
+      text-align: center;
+      padding: 0;
+      list-style-type: none;
+
+    }
+
+    .copyrigh-language-wrap ul li {
+      display: inline-block;
+      padding: 5px;
+    }
+
+
+    /* copyrigh */
+
+    @media only screen and (max-width: 769px) {
+      .header-header {
+        position: relative;
+      }
+
+      .header {
+        justify-content: center;
+      }
+
+      .header-wrap {
+        display: flex;
+        height: 100%;
+
+      }
+
+      .button {
+        display: flex;
+
+      }
+
+      .header-wrap-2 {
+        position: absolute;
+        right: 25px;
+
+
+      }
+
+      .header-icon2 {
+
+        display: none;
+
+      }
+
+      .header-icon3 {
+        display: none;
+      }
+
+
+      .logo {
+        margin: 0;
+        width: 135px;
+      }
+
+
+      .title {
+        display: none;
+
+      }
+
+
+
+
+      .button-one:hover {
+        transform: translateY(-7px);
+      }
+
+      /* phone */
+      .phone {
+        padding: 30px 10px;
+      }
+
+      .phone-item-wrap {
+        max-width: 300px;
+        overflow: hidden;
+      }
+
+      .phone-item {
+        justify-content: flex-start;
+        width: 1200px;
+        padding: 0;
+      }
+
+      .phone-img {
+        min-width: 100px;
+        margin: 0 10px;
+      }
+
+      .phone-left {
+        display: flex;
+      }
+
+      .phone-right {
+        display: flex;
+      }
+
+      /* phone */
+
+
+      /* image部分
+    .shock-content {
+      height: 480px;
+    }
+
+    .image-content {
+      width: 390px;
+      left: calc(50% - 195px);
+      top: calc(50% - 168px);
+    }
+
+    .content-p {
+      margin: 30px auto;
+    } */
+      .product-item {
+        width: 100%;
+      }
+
+      /* 圖片100% flex warp自動 */
+      .product-image-wrap {
+        width: 100%;
+      }
+
+      /* .news-warp {
+        height: 100%;
+      } */
+      /* 下面會過長 */
+
+      .news {
+        flex-direction: column;
+      }
+
+      .news-text {
+        margin-bottom: 20px;
+        width: 100%;
+      }
+
+      .news-email-wrap {
+        margin-top: 20px;
+        width: 100%;
+      }
+
+      /* footer */
+      .footer {
+        padding: 10px 10px;
+      }
+
+      .footer-menu-icon {
+        display: none;
+      }
+
+      .footer-none {
+        display: none;
+      }
+
+      .footer-menu-item {
+        width: 33.3%;
+
+      }
+
+      .footer-block-name {
+        padding: 5px 0;
+      }
+
+
+    }
+  </style>
+</head>
+
+<body>
+  <!-- header -->
+  <nav>
+    <div class="header-header">
+      <div class="header">
+        <div class="header-wrap">
+          <div class="button">
+            <span class="button-one"></span>
+            <!-- <span class="buttton-two"></span> -->
+          </div>
+          <div class="logo"> <a href="#"><img src="./rhinoceros/rhinoshield-logo--zh-TW.svg" alt="LOGO"></a>
+          </div>
+          <div class="title">
+            <dl class="title-wrap">
+              <dd class="title-1"> <a href="#" class="title-a">型號</a></dd>
+              <dd class="title-2"> <a href="#" class="title-a">產品</a></dd>
+              <dd class="title-3"> <a href="#" class="title-a">設計系列</a></dd>
+              <dd class="title-4"> <a href="#" class="title-a">支援服務</a></dd>
+              <dd class="title-5"> <a href="#" class="title-a">最新消息</a></dd>
+            </dl>
+          </div>
+        </div>
+
+        <div class="header-wrap-2">
+          <div class="header-icon">
+            <div class="header-icon1">
+              <a href="" class="shopping"><img src="./rhinoceros/cart.svg" alt="購物車"></a>
+            </div>
+            <div class="header-icon2">
+              <a href="" class="member"><img src="./rhinoceros/login-01.svg" alt="會員"></a>
+            </div>
+            <div class="header-icon3">
+              <div class="Inquire">
+                <a href=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="36px"
+                    height="36px">
+                    <path d="M0 0h24v24H0z" fill="none"></path>
+                    <path
+                      d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
+                    </path>
+                  </svg> </a>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+
+      </div>
+    </div>
+  </nav>
+  <!-- header -->
+  <!-- /* Carousel 幻燈輪播片 */ -->
+
+  <div class="container">
+
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+        <li data-target="#myCarousel" data-slide-to="4"></li>
+        <li data-target="#myCarousel" data-slide-to="5"></li>
+
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+        <div class="item active">
+          <a href="#"><img src="./rhinoceros/image/homepage_A42_Banner_3840x1540_TW_2800x.jpg" alt="Los Angeles"
+              style="width:100%" ;></a>
+        </div>
+
+
+
+        <div class="item">
+
+          <a href="#"><video src="./rhinoceros/image/homepage_banner_mickey_video_desktop.mp4" autoplay muted loop
+              style="width:100% " ;></video></a>
+        </div>
+        <div class="item">
+          <a href="#"><img src="./rhinoceros/image/homepage_Banner_Naruto_mobile_2800x.jpg" alt="Chicago"
+              style="width:100%" ;></a>
+        </div>
+        <div class="item">
+          <a href="#"><img src="./rhinoceros/image/homepage_iPhone12_Launch_1920_tw_100_2800x.jpg" alt="Chicago"
+              style="width:100%" ;></a>
+        </div>
+        <div class="item">
+
+          <a href="#"><video src="./rhinoceros/image/homepage_NBA_banner_tw_2.mp4" autoplay muted loop
+              style="width:100% " ;></video></a>
+        </div>
+        <div class="item">
+          <a href="#"></a><img src="./rhinoceros/image/homepage_ZF8_Banner_New_Branding_TW_2800x.jpg" alt="Chicago"
+            style="width:100%" ;></a>
+        </div>
+        <div class="item">
+          <a href="#"><img src="./rhinoceros/image/Mi10_homepage_banner_1920_TW_2800x.jpg" alt="Chicago"
+              style="width:100%" ;></a>
+        </div>
+
+      </div>
+
+
+      <!-- Left and right controls -->
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+      </a>
+
+    </div>
+    <!--  /* Carousel 幻燈輪播片 */ -->
+  </div>
+  <!--  /* Carousel 幻燈輪播片 */ -->
+  <!-- phone -->
+  <div class="phone">
+    <div class="phone-item-wrap">
+      <button class="phone-left">
+        <i class="fa fa-angle-left"></i>
+        <!-- 上方 需要用到特殊icon 所以只能用此class -->
+      </button>
+      <button class="phone-right">
+        <i class="fa fa-angle-right"></i>
+        <!-- 上方 需要用到特殊icon 所以只能用此class -->
+      </button>
+      <!--   ul>(li>a>(div>img)+(div>p))*10 -->
+      <ul class="phone-item">
+        <li class="phone-img">
+          <a href="">
+            <div style="width: 30px; margin-bottom: 15px;"><img src="./rhinoceros/phone/phone_list_apple.png" alt=""
+                style="display: block;
+                        width: 100%;
+                        height: auto;"></div>
+            <div>
+              <p>Apple</p>
+            </div>
+          </a>
+        </li>
+        <li class="phone-img">
+          <a href="">
+            <div style="width: 30px;margin-bottom: 15px;"><img src="./rhinoceros/phone/phone_list_apple-watch.png"
+                alt="" style="width: 100%;display: block;height: auto;"></div>
+            <div>
+              <p>Apple Watch</p>
+            </div>
+          </a>
+        </li>
+        <li class="phone-img">
+          <a href="">
+            <div style="width: 36px; margin-bottom: 15px;"><img src="./rhinoceros/phone/phone_list_airpods.png" alt=""
+                style="width: 100% ;display: block; height: auto;"></div>
+            <div>
+              <p style="margin: 0; padding: 0;">Airpods</p>
+            </div>
+          </a>
+        </li>
+        <li class="phone-img">
+          <a href="">
+            <div style="width: 30px; margin-bottom: 15px;"><img src="./rhinoceros/phone/phone_list_asus.png" alt=""
+                style="display: block;
+                        width: 100%;
+                        height: auto;"></div>
+            <div>
+              <p>Asus</p>
+            </div>
+          </a>
+        </li>
+        <li class="phone-img">
+          <a href="">
+            <div style="width: 30px; margin-bottom: 15px;"><img src="./rhinoceros/phone/phone_list_google.png" alt=""
+                style="display: block;
+                        width: 100%;
+                        height: auto;"></div>
+            <div>
+              <p>Google</p>
+            </div>
+          </a>
+        </li>
+        <li class="phone-img">
+          <a href="">
+            <div style="width: 30px; margin-bottom: 15px;"><img src="./rhinoceros/phone/phone_list_huawei.png" alt=""
+                style="display: block;
+                        width: 100%;
+                        height: auto;"></div>
+            <div>
+              <p>Huawei</p>
+            </div>
+          </a>
+        </li>
+        <li class="phone-img">
+          <a href="">
+            <div style="width: 30px; margin-bottom: 15px;"><img src="./rhinoceros/phone/phone_list_oppo.png" alt=""
+                style="display: block;
+                        width: 100%;
+                        height: auto;"></div>
+            <div>
+              <p>Oppo</p>
+            </div>
+          </a>
+        </li>
+        <li class="phone-img">
+          <a href="">
+            <div style="width: 30px; margin-bottom: 15px;"><img src="./rhinoceros/phone/phone_list_samsung.png" alt=""
+                style="display: block;
+                        width: 100%;
+                        height: auto;"></div>
+            <div>
+              <p>Samsung</p>
+            </div>
+          </a>
+        </li>
+        <li class="phone-img">
+          <a href="">
+            <div style="width: 30px; margin-bottom: 15px;"><img src="./rhinoceros/phone/phone_list_oneplus.png" alt=""
+                style="display: block;
+                        width: 100%;
+                        height: auto;"></div>
+            <div>
+              <p>OnePlus</p>
+            </div>
+          </a>
+        </li>
+        <li class="phone-img">
+          <a href="">
+            <div style="width: 30px; margin-bottom: 15px;"><img src="./rhinoceros/phone/others.png" alt="" style="display: block;
+                        width: 100%;
+                        height: auto;"></div>
+            <div>
+              <p>看更多</p>
+            </div>
+          </a>
+        </li>
+      </ul>
+
+
+
+    </div>
+  </div>
+  <!-- phone -->
+  <!-- shock image -->
+
+  <div class="shock-cotent">
+    <div class="image-shock">
+      <img class="shock" src="./rhinoceros/shockspread_banner.jpg" alt="">
+
+    </div>
+    <div class="image-content">
+      <div class="image-wrap">
+        <img src="./rhinoceros/shockspread-mobile.svg" class="content-image" alt="" style="color: lavenderblush" ;>
+      </div>
+      <div class="content-p">
+        <p>超過軍規標準</p>
+        <p>獨家緩衝材質超越美國軍規落摔測試標準(MIL-STD 810G)，可吸收高達3.5公尺落摔衝擊</p>
+        <p>蜂巢結構設計</p>
+        <p>內嵌蜂巢結構，為保護殼額外增加10%衝擊吸收力</p>
+      </div>
+      <a href="" class="content-btn"><span>觀看落摔影片</span></a>
+    </div>
+
+  </div>
+  <!-- shock image -->
+  <!-- produc -->
+  <div class="product">
+    <div class="product-item product-image-left">
+      <a href="" class="product-link"></a>
+      <div class="product-title-wrap">
+
+        <div class="product-title">
+          <h2 class="title-h2">3D 壯撞貼</h2>
+          <p class="title-p">耐衝擊螢幕保護貼</p>
+
+        </div>
+
+      </div>
+      <div class="product-image-wrap">
+        <div class="product-img">
+          <img src="./rhinoceros/newflow_category_3d_impact.png" alt="" class="produvt-image">
+        </div>
+
+      </div>
+
+    </div>
+    <div class="product-item product-image-right">
+      <a href="" class="product-link"></a>
+      <div class="product-title-wrap">
+
+        <div class="product-title">
+          <h2 class="title-h2">SolidSuit</h2>
+          <p class="title-p">防摔背蓋手機殼</p>
+
+        </div>
+
+      </div>
+      <div class="product-image-wrap">
+        <div class="product-img">
+          <img src="./rhinoceros/newflow_category_solidsuit_iphone-x.png" alt="" class="produvt-image">
+
+        </div>
+      </div>
+    </div>
+    <div class="product-item product-image-left">
+      <a href="" class="product-link"></a>
+      <div class="product-title-wrap">
+
+        <div class="product-title">
+          <h2 class="title-h2">Mod NX</h2>
+          <p class="title-p">防摔邊框背蓋兩用殼</p>
+
+        </div>
+
+      </div>
+      <div class="product-image-wrap">
+        <div class="product-img">
+          <img src="./rhinoceros/newflow_category_mod_iphone-x.png" alt="" class="produvt-image">
+        </div>
+
+      </div>
+
+    </div>
+    <div class="product-item product-image-right">
+      <a href="" class="product-link"></a>
+      <div class="product-title-wrap">
+
+        <div class="product-title">
+          <h2 class="title-h2">CrashGuard NX</h2>
+          <p class="title-p">防摔邊框手機殼</p>
+
+        </div>
+
+      </div>
+      <div class="product-image-wrap">
+        <div class="product-img">
+          <img src="./rhinoceros/newflow_category_crashguard_nx_iphone-x.png" alt="" class="produvt-image">
+
+        </div>
+      </div>
+    </div>
+    <div class="product-item product-image-left">
+      <a href="" class="product-link"></a>
+      <div class="product-title-wrap">
+
+        <div class="product-title">
+          <h2 class="title-h2">Apple Watch 防護周邊</h2>
+          <p class="title-p">模組化手錶保護殼</p>
+
+        </div>
+
+      </div>
+      <div class="product-image-wrap">
+        <div class="product-img">
+          <img src="./rhinoceros/newflow_category_applewatch_standard.png" alt="" class="produvt-image">
+        </div>
+
+      </div>
+
+    </div>
+    <div class="product-item product-image-right">
+      <a href="" class="product-link"></a>
+      <div class="product-title-wrap">
+
+        <div class="product-title">
+          <h2 class="title-h2">AirPods 防護周邊</h2>
+          <p class="title-p">耳機保護套</p>
+
+        </div>
+
+      </div>
+      <div class="product-image-wrap">
+        <div class="product-img">
+          <img src="./rhinoceros/newflow_category_airpods_standard.png" alt="" class="produvt-image">
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- produc -->
+  <!-- news -->
+  <div class="news-wrap">
+    <div class="news">
+      <div class="news-text">
+        <h2 style="color:black;  font-weight: bolder;">訂閱最新消息</h2>
+        <p style="margin-top: 5px; font-weight:bold;">我想要收到第一手的產品訊息以及折扣優惠</p>
+      </div>
+      <div class="news-email-wrap">
+        <div class="news-email"> <input type="email" id="email" placeholder="您的 Email" style="background-color: rgb(189, 189, 189); height: 40px; color: #fff;;max-width: 350px;
+                    width: 70%; font-weight: bold">
+          <button style="background-color: lightgrey; height: 40px ;">
+            <span style="color: #fff; font-weight: bold;">GO!</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- news -->
+  <!-- footer -->
+  <div class="footer">
+    <div class="footer-wrap">
+      <div class="footer-meun">
+        <div class="footer-menu-link">
+          <div class="footer-menu-item">
+            <h3 class="fotter-title">商店</h3>
+            <div class="footer-block">
+              <a href="">
+                <div class="footer-block-name">
+                  Apple
+                </div>
+              </a>
+            </div>
+            <div class="footer-block">
+              <a href="">
+                <div class="footer-block-name">
+                  Samsung
+                </div>
+              </a>
+            </div>
+            <div class="footer-block">
+              <a href="">
+                <div class="footer-block-name">
+                  ASUS
+                </div>
+              </a>
+            </div>
+            <div class="footer-block">
+              <a href="">
+                <div class="footer-block-name">
+                  Huawei
+                </div>
+              </a>
+            </div>
+            <div class="footer-block">
+              <a href="">
+                <div class="footer-block-name">
+                  OnePlus
+                </div>
+              </a>
+            </div>
+            <div class="footer-block">
+              <a href="">
+                <div class="footer-block-name">
+                  Google
+                </div>
+              </a>
+            </div>
+            <div class="footer-block">
+              <a href="">
+                <div class="footer-block-name">
+                  3D 壯撞貼
+                </div>
+              </a>
+            </div>
+
+
+          </div>
+          <div class="footer-menu-item">
+            <h3 class="fotter-title">支援服務</h3>
+            <div class="footer-block">
+              <a href="" style="text-decoration: none;">
+                <div class="footer-block-name ">
+                  關於我們
+                </div>
+              </a>
+            </div>
+            <div class="footer-block">
+              <a href="">
+                <div class="footer-block-name">
+                  部落格
+                </div>
+              </a>
+            </div>
+            <div class="footer-block">
+              <a href="">
+                <div class="footer-block-name">
+                  影片教學
+                </div>
+              </a>
+            </div>
+            <div class="footer-block">
+              <a href="">
+                <div class="footer-block-name">
+                  常見問題
+                </div>
+              </a>
+            </div>
+            <div class="footer-block">
+              <a href="">
+                <div class="footer-block-name">
+                  退換貨須知
+                </div>
+              </a>
+            </div>
+            <div class="footer-block">
+              <a href="">
+                <div class="footer-block-name">
+                  網站使用條款
+                </div>
+              </a>
+            </div>
+            <div class="footer-block">
+              <a href="">
+                <div class="footer-block-name">
+                  聯絡我們
+                </div>
+              </a>
+            </div>
+
+
+          </div>
+          <div class="footer-menu-item">
+            <h3 class="footer-none fotter-title">更多</h3>
+            <div class="footer-block footer-none">
+              <a href="">
+                <div class="footer-block-name ">
+                  商店
+                </div>
+              </a>
+            </div>
+            <div class="footer-block footer-none">
+              <a href="">
+                <div class="footer-block-name">
+                  人才招募
+                </div>
+              </a>
+            </div>
+
+
+
+          </div>
+        </div>
+        <div class="footer-menu-icon">
+          <h3 class="fotter-title">追蹤我們的社群</h3>
+          <ul class="footer-menu-link-ul">
+            <li><a href=""><img src="./rhinoceros/icon/social-icon-dark__facebook.svg" alt="" style="width: 40px;
+                        height: 40px;"></a></li>
+            <li><a href=""><img src="./rhinoceros/icon/social-icon-dark__instagram.svg" alt="" style="width: 40px;
+                        height: 40px;"></a></li>
+            <li><a href=""><img src="./rhinoceros/icon/social-icon-dark__line.svg" alt="" style="width: 40px;
+                        height: 40px;"></a></li>
+            <li><a href=""><img src="./rhinoceros/icon/social-icon-dark__pinterest.svg" alt="" style="width: 40px;
+                        height: 40px;"></a></li>
+            <li><a href=""><img src="./rhinoceros/icon/social-icon-dark__twitter.svg" alt="" style="width: 40px;
+                        height: 40px;"></a></li>
+            <li><a href=""><img src="./rhinoceros/icon/social-icon-dark__youtube.svg" alt="" style="width: 40px;
+                        height: 40px;"></a></li>
+          </ul>
+          <div class="footer-icon-text">
+            <p style="margin: 13px 0; font-size: 13px;">客服上班時間10:00～18:00（週一至週五，假日及國定假日除外)</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- footer -->
+  <!-- copyrigh -->
+
+  <div class="copyrigh-language">
+    <div class="copyrigh-language-wrap">
+      <ul>
+        <li>Copyright © 2021 Evobro Co., Limited All rights reserved.</li>
+        <li>English </li>
+        <li>中文 (繁體)</li>
+        <li>日本語</li>
+        <li>Français</li>
+        <li>Deutschland</li>
+        <li>Español</li>
+        <li>Tiếng Việt</li>
+        <li>ภาษาไทย</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- copyrigh -->
+
+
+
+</body>
+
+</html>
